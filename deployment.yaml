@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    rbac-management-operator.com/example: running
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      rbac-management-operator.com/example: running
+  template:
+    metadata:
+      labels:
+        rbac-management-operator.com/example: running
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:stable
+          ports:
+            - containerPort: 80
