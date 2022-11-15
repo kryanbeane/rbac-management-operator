@@ -5,4 +5,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: kryanbeane/rbac-management-operator
-  newTag: test
+  newTag: latest
